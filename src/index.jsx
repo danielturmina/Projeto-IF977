@@ -12,7 +12,7 @@ function App() {
         <Router>
           {/* <Navbar /> */}
           <Switch>
-            <Route component={IsLogged} path="/login" />
+            <Route component={IsLogged} path="/" />
             <Route component={UserProfile} path="/profile" />
           </Switch>
         </Router>
