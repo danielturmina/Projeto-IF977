@@ -12,8 +12,8 @@ function App() {
         <Router>
           {/* <Navbar /> */}
           <Switch>
-            <Route component={IsLogged} path="/" />
-            <Route component={UserProfile} path="/profile" />
+            <Route component={IsLogged} exact path="/" />
+            <Route component={UserProfile} exact path="/profile" />
           </Switch>
         </Router>
         <GlobalStyle />
