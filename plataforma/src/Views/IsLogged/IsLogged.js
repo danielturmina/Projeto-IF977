@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import fire from './firebase';  
-import Login from './Login';
-import Hero from './Hero';
-import './App.css';
+import fire from '../../firebase';  
+import Login from '../Login/Login';
+import Hero from '../Hero/Hero';
+import './IsLogged.css';
 
 
-const App = () => {
+const IsLogged = () => {
   const [user,setUser] = useState('');
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
@@ -37,7 +37,9 @@ const App = () => {
             break;
           case "auth/wrong-password":
             setPasswordError(err.message);
-            break;  
+            break; 
+          default:
+            break;
         }
       });
   };
@@ -55,7 +57,9 @@ const App = () => {
             break;
           case "auth/weak-password":
             setPasswordError(err.message);
-            break;  
+            break;
+          default:
+            break;
         }
       });
   };
@@ -63,6 +67,7 @@ const App = () => {
     fire.auth().signOut();
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const authListener = () =>{
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -76,11 +81,10 @@ const App = () => {
 
   useEffect (() =>{
     authListener();
-  }, []);
+  }, [authListener]);
 
   return (
-
-    <div className = 'App'>
+    <div className = 'IsLogged'>
       {user ? (
         <Hero handleLogout = {handleLogout}/>
       ) : (
@@ -101,4 +105,4 @@ const App = () => {
   );
 };
   
-export default App;
+export default IsLogged;

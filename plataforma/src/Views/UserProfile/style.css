@@ -1,0 +1,33 @@
+.user-profile-section {
+  display: flex;
+  justify-content: center;
+
+  background-color: rgb(214, 247, 255);
+  height: 100vh;
+  width: 100vw;
+}
+
+.user-profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 450px;
+  height: 550px;
+  margin-top: 5%;
+
+
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+
+.user-profile-photo {
+  width: 150px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.user-profile-description {
+  font-size: 0.95rem;
+}
