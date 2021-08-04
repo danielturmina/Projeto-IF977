@@ -2,13 +2,14 @@ import firebase from 'firebase'
 
 
 var firebaseConfig = {
-    apiKey: "AIzaSyB0LDe1GGan2l6TygJO7klV0o2Os1ZN8-k",
-    authDomain: "if977-plataforma.firebaseapp.com",
-    projectId: "if977-plataforma",
-    storageBucket: "if977-plataforma.appspot.com",
-    messagingSenderId: "534467930271",
-    appId: "1:534467930271:web:1e7bd0ac91cca4d1591aaa"
-  };
+  apiKey: "AIzaSyCxXpuRv3hOcEH6bVqwBS3d9LixnBSEvGE",
+  authDomain: "if977-plataformaweb.firebaseapp.com",
+  projectId: "if977-plataformaweb",
+  storageBucket: "if977-plataformaweb.appspot.com",
+  messagingSenderId: "657063684926",
+  appId: "1:657063684926:web:4f4db33407527d54695a6f"
+};
+
   // Initialize Firebase
 const fire = firebase.initializeApp(firebaseConfig);
 
