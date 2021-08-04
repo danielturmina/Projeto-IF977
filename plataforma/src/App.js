@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import fire from './firebase';  
-import Login from './Login';
-import Hero from './Hero';
+import Login from './Views/Login/Login';
+import Hero from './Views/Hero/Hero';
+import AnnoucementView from './Views/Annoucement/Annoucement';
+import HomeView from './Views/Home/Home';
 import './App.css';
 
 
@@ -79,7 +81,6 @@ const App = () => {
   }, []);
 
   return (
-
     <div className = 'App'>
       {user ? (
         <Hero handleLogout = {handleLogout}/>
