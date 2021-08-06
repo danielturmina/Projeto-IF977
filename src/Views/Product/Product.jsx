@@ -1,6 +1,6 @@
 import React from "react";
 import DrumsKit from './drumsKit.jpg'
-import { IconName } from "react-icons/hi";
+//import { IconName } from "react-icons/hi";
 
 import './style.css'
 
