@@ -5,6 +5,7 @@ import GlobalStyle from './global/globalStyle';
 
 import IsLogged from './Views/IsLogged/IsLogged';
 import UserProfile from './Views/UserProfile/UserProfile';
+import Product from './Views/Product/Product';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Switch>
             <Route component={IsLogged} exact path="/" />
             <Route component={UserProfile} exact path="/profile" />
+            <Route component={Product} exact path="/product" />
           </Switch>
         </Router>
         <GlobalStyle />
