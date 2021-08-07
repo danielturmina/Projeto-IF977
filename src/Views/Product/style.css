@@ -1,9 +1,10 @@
-:root{
-  max-width: 1220px;
-  margin: 0 auto;
-  padding: 0 16px;
-  background: #F5F5F5;
-}
+  .product{
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 16px;
+    background: #F5F5F5;
+  
+  }
   .container{
     display: flex;
     flex-direction: column;
@@ -50,7 +51,7 @@
     grid-template-columns: 65fr 35fr;
   }
 
-  .coluna{
+  .coluna1{
     border-right: 1px solid grey;
   }
 
@@ -63,23 +64,6 @@
 
   .product-img{
     height: 60%;
-  }
-
-  .description{    
-    border-top: 1px solid grey;
-    padding: 44px 32px;
-  }
-
-  .description h2{
-    font-weight: bold;
-    font-size: 24px;
-    margin-bottom: 32px;
-  }
-
-  .description p{
-    font-size: 20px;
-    color: grey;
-    line-height: 27px;
   }
 
   .valor-diaria h1{
@@ -103,3 +87,4 @@
     text-align: center;
     flex: 2;
   }
+
