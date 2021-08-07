@@ -6,7 +6,7 @@ const LocatorInfo = () => {
     return( 
         <React.Fragment>
           <div className = "containerLocator">
-              <div className = "titleLocator">Informações sobre o vendedor</div>
+              <div className = "titleLocator">Informações sobre o locador</div>
               <div className = "location">
                   <div className = "location1">
                   <p><HiOutlineLocationMarker size="20px"/>Localização</p>
