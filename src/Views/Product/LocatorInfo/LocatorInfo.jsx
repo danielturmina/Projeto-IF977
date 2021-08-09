@@ -43,7 +43,7 @@ const LocatorInfo = () => {
               </div>
 
                     
-            <a href="K">Ver mais dados do locador</a>{ /* VER CAMINHO */'' }
+            <a href="/profile">Ver mais dados do locador</a>{ /* VER CAMINHO */'' }
           </div>
        </React.Fragment> 
 

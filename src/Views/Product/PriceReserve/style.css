@@ -1,0 +1,55 @@
+.containerPrice{
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titlePrice{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+.heart{
+    width: 10px;
+    color: rgb(19, 70, 212);
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.delivery{
+    margin-top: 12px;
+    background: rgb(6, 133, 95);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    width: fit-content;
+}
+
+.price h2{
+    font-size:30px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.price h3{
+    margin-top: 20px;
+    font-size:13px;
+    font-weight: 400;
+
+}
+
+.availability button{
+    margin-top: 12px;
+    background: rgb(19, 70, 212);
+    color: white;
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 13px;
+    width: fit-content;
+}
