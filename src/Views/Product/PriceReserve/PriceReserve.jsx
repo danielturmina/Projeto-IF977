@@ -1,10 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import './style.css'
 import { HiOutlineHeart } from "react-icons/hi"
 import Calendar from "../Calendar/calendar";
 
 const PriceReserve = () => {
-    return( 
+  const [numberSelected, setNumberSelected] = useState(2);
+  
+
+
+
+  return( 
         <React.Fragment>
           <div className = "containerPrice">
             <div className = "titlePrice">
@@ -17,7 +22,8 @@ const PriceReserve = () => {
                     <h2>R$ 50</h2>
             </div>
             <div className = "calendarPrice">
-            <Calendar/> 
+            <Calendar onSelect={(e) => {setNumberSelected(e)}}/> 
+            <div>{numberSelected*10}</div>
             </div>
             <div className = "availability">
                 <button>Verificar Disponibilidade</button>
