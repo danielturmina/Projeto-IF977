@@ -7,6 +7,7 @@ import IsLogged from './Views/IsLogged/IsLogged';
 import UserProfile from './Views/UserProfile/UserProfile';
 import Product from './Views/Product/Product';
 
+import EndPag from './Views/EndPag/endPag';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route component={IsLogged} exact path="/" />
             <Route component={UserProfile} exact path="/profile" />
             <Route component={Product} exact path="/product" />
+            <Route component={EndPag} exact path="/endpag" />
           </Switch>
         </Router>
         <GlobalStyle />
