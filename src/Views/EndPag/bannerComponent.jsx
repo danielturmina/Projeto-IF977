@@ -10,14 +10,14 @@ export default function BannerComponent(props){
                 <div className = 'foto'>
                     <img src={imgProduto} alt="foto_produto"/>
                 </div>
-                <div className = 'nomeProduto'> Nome de Produto: - Titulo do nome do Produto --- props </div>
+                <div className = 'nomeProduto'> Nome de Produto: {props.produtoNome} </div>
                 <div className = 'precoProduto'> R$ {props.bannerPreco} </div>
                 <div className = 'divInformante'> 
                     <div>
                         <div className = 'fotoInformante'>
                             <img src={fotoUsuario} alt="foto_fulano" />
                         </div>
-                        <a href="http://localhost:3000/Profile/">NickUsuário - Bairro</a>
+                        <p>Usuário: {props.usuario}</p>
                     </div>
                     
                     <button className = 'alugarButton'><div>Link</div></button>  

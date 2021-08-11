@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './endPag.css'
 import imgCarrinho from './imgs/ico_carrinhos.png'
 import imgPesquisa from './imgs/ico_pesquisa.png'
@@ -13,11 +13,28 @@ import imgUsuario from './imgs/ico_usuario.png'
 import imgLogo from './imgs/ico_logo.png'
 import BannerComponent from './bannerComponent'
 import FooterComponent from './footer'
+import firebase from "../../firebase";
 
 export default function Index() {
+    const [produtos, setProdutos] = useState([]);
+
+    const ref = firebase.firestore().collection("produtos");
     
-    const [preco, setPreco] = useState(0)
-    
+    function getProdutos() {
+        ref.onSnapshot((querySnapshot) => {
+            const items = [];
+            querySnapshot.forEach((doc) => {
+                items.push(doc.data())
+            });
+            setProdutos(items);
+        });
+    }
+
+    useEffect(() => {
+        getProdutos();
+    }, [])
+
+
     return (
         <>
             <div className = 'filtroProcura'>
@@ -64,12 +81,9 @@ export default function Index() {
                 </div>
             </div>
             <div className = 'meio'>
-                <BannerComponent bannerPreco = {preco}/>
-                <BannerComponent bannerPreco = {preco}/>
-                <BannerComponent bannerPreco = {preco}/>
-                <BannerComponent bannerPreco = {preco}/>
-                <BannerComponent bannerPreco = {preco}/>
-                <BannerComponent bannerPreco = {preco}/>
+                {produtos.map((produto) => (
+                    <BannerComponent key={produto.id} produtoNome={produto.nome} bannerPreco={produto.preco} usuario={produto.usuario}/>
+                ))}
             </div>
 
             <FooterComponent email='ycb@cin.ufpe.br' nome='Yuri Barros' />
