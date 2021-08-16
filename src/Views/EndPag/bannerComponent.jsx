@@ -17,7 +17,7 @@ export default function BannerComponent(props){
                         <div className = 'fotoInformante'>
                             <img src={fotoUsuario} alt="foto_fulano" />
                         </div>
-                        <p>Usuário: {props.usuario}</p>
+                        <p className = 'pDivInformante'>Usuário: {props.usuario}</p>
                     </div>
                     
                     <button className = 'alugarButton'><div>Link</div></button>  

@@ -8,6 +8,7 @@ import UserProfile from './Views/UserProfile/UserProfile';
 import Product from './Views/Product/Product';
 
 import EndPag from './Views/EndPag/endPag';
+import FooterComponent from './Views/EndPag/footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           </Switch>
         </Router>
         <GlobalStyle />
+        <FooterComponent/>
       </>
   );
 }

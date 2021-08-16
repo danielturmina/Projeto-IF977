@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-
 textarea:focus, input:focus, select:focus { /*input*/
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;      
 } 
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    min-height: 835px;
+}
 
 .entrarLink{
     color: #ffffffcb;
@@ -30,6 +35,7 @@ a.pesquisaButton:hover{
     display: flex;
     flex-direction: column;
     overflow: auto;
+    height: 100%;
 }
 
 .filtroProcura{
@@ -61,8 +67,6 @@ a.pesquisaButton:hover{
     justify-content: center; 
     justify-items: center;   
 }
-
-
 
 .carrinhoButton{
     display: flex;
@@ -141,9 +145,9 @@ a.pesquisaButton:hover{
     margin-top: 4px;
     padding: 14px;
     background-color: #f3f9fa;
-    min-width: 500px;
-    min-height: 220px;
+    min-width: 640px;
     max-width: 640px;
+    min-height: 220px;
     border-radius: 0px 0px 20px 0px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.19), inset 0px -4px 0 rgba(0, 0, 0, 0.205);
     grid-template-columns: 205px auto;
@@ -170,7 +174,7 @@ a.pesquisaButton:hover{
     grid-area: nomeProd;
     padding: 7px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     font-size: 1.6em;
     text-align: justify;
     font-family: 'Roboto', sans-serif; 
@@ -181,6 +185,7 @@ a.pesquisaButton:hover{
     display: flex;
     align-items: center;
     font-weight: bold;
+    font-size: 1.3em;
     grid-area: precoProd;
     font-family: 'Roboto', sans-serif;    
 }
@@ -198,7 +203,7 @@ a.pesquisaButton:hover{
     align-items: center;  
 }
 
-.divInformante > div > a{
+.divInformante > div > p{
     margin-left: 10px;
     margin-right: 10px;
     font-family: 'Roboto', sans-serif; 
@@ -255,7 +260,7 @@ a.pesquisaButton:hover{
     text-align: center;
     padding: 4px;
     gap: 3px;
-    margin-bottom: 13px;
+    margin-bottom: 0px;
 }
 
 h4, h5, h6, a{
@@ -290,3 +295,19 @@ h4, h5, h6, a{
 .informes > div{
     font-family: 'Roboto', sans-serif; 
 }
+
+.botaoRolar{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.308);
+    bottom: 130px;
+    right: 30px;
+    opacity: 0.8;
+}
+
+.principal:hover {
+    opacity: 1;
+}
+
