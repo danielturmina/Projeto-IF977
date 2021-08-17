@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
 
-  background-color: rgb(214, 247, 255);
+  background-color: rgb(255, 209, 209);
   height: 100vh;
   width: 100vw;
 }
@@ -15,11 +15,54 @@
   width: 450px;
   height: 550px;
   margin-top: 5%;
-
+  margin-right: 5%;
 
   background-color: white;
   border: 1px solid black;
   border-radius: 30px;
+}
+
+.user-profile-annoucement-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 580px;
+  height: 550px;
+
+  margin-top: 5%;
+
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+
+.user-profile-annoucement-title {
+  margin: 10px 0;
+  height: fit-content;
+}
+
+.user-profile-annoucement-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  height: 100%;
+  width: 100%;  
+}
+
+.user-profile-annoucement-items {
+  width: 100px;
+  height: 100px;
+
+  margin-right: 10px;
+  margin-bottom: 10px;
+  
+  border-radius: 10px;
+  border: 1px solid black;
+
+  cursor: pointer;
+
+  background-color: black;
 }
 
 .user-profile-photo {
@@ -30,4 +73,10 @@
 
 .user-profile-description {
   font-size: 0.95rem;
+}
+
+.user-profile-button {
+  width: 50%;
+  border-radius: 10px;
+  
 }

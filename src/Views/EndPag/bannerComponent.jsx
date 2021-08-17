@@ -8,7 +8,7 @@ export default function BannerComponent(props){
         <>
             <div className = 'banner'> 
                 <div className = 'foto'>
-                    <img src={imgProduto} alt="foto_produto"/>
+                    <img src={props.imagem} alt="foto_produto" style={{ width: '100%', height: '100%' }}/>
                 </div>
                 <div className = 'nomeProduto'> Nome de Produto: {props.produtoNome} </div>
                 <div className = 'precoProduto'> R$ {props.bannerPreco} </div>
