@@ -16,7 +16,10 @@
     width: 10px;
     color: rgb(19, 70, 212);
     margin-left: 10px;
-    cursor: pointer;
+    background-color: white;
+    padding: 0px;
+    padding-right: 40px;
+    padding-top: 2px;
 }
 
 .delivery{
