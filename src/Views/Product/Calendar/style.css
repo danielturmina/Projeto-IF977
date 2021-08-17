@@ -118,3 +118,10 @@
   .react-calendar--selectRange .react-calendar__tile--hover {
     background-color: #e6e6e6;
   }
+  .dias{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .valueTotal{
+    font-weight: bold
+  }
