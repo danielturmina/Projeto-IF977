@@ -35,6 +35,10 @@ export default createGlobalStyle`
     position: relative;
     min-height: calc(100vh - 75px);
     margin: 75px 0 0 0;
+    background-color: #CDDCDC;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    overflow: auto; 
+    font-family: 'Roboto', sans-serif;
   }
 
   ::-webkit-scrollbar {

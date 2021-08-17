@@ -1,0 +1,17 @@
+.description{    
+    border-top: 1px solid grey;
+    padding: 44px 32px;
+  }
+
+  .description h2{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .description p{
+    font-size: 20px;
+    color: grey;
+    line-height: 27px;
+    text-align: justify;
+  }

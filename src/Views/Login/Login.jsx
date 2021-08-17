@@ -1,4 +1,5 @@
 import React from 'react';
+import FooterComponent from '../EndPag/footer';
 
 const Login = (props) => {
     const {
@@ -15,6 +16,7 @@ const Login = (props) => {
     } = props;
 
     return(
+        <div>
         <section className = 'login'>
             <div className= 'loginContainer'>
                 <label>Username</label>
@@ -49,6 +51,8 @@ const Login = (props) => {
                 </div>
             </div>
         </section>
+        <FooterComponent email='@cin.ufpe.br' nome='Fulano' />
+        </div>
     );
 };
 

@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+textarea:focus, input:focus, select:focus { /*input*/
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;      
+} 
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    min-height: 835px;
+}
+
+.entrarLink{
+    color: #ffffffcb;
+    font-weight: bold;
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+a.entrarLink:hover {
+    color: #e67586;
+}
+
+a:hover {
+    color: #df4960;
+}
+
+a.pesquisaButton:hover{
+    filter: brightness(1.2);
+}
+
+.meio{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 100%;
+}
+
+.filtroProcura{
+    min-width: 750px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    /*background: linear-gradient(180deg, rgba(247,71,48,1) 0%, rgba(254,94,49,1) 74%, rgba(255,100,54,1) 100%);*/ /*paleta de cores inicial*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#d0253f), to(#cc0041)); /*gradiente que vi no site do blender*/
+    min-height: 80px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.13), 0 2px 40px 0 rgba(0, 0, 0, 0.151);
+    grid-template-columns: 100px auto;
+    gap: 20px;  
+}
+
+.divBusca{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 15px;
+    height: auto;      
+}
+
+.divBusca > div{
+    display: flex;
+    justify-content: center; 
+    justify-items: center;   
+}
+
+.carrinhoButton{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(202, 202, 0, 0);
+    border-radius: 15px;         
+}
+
+.carrinhoButton:hover{
+    background-color: rgba(17, 17, 17, 0.116)   
+}
+
+.iconesFiltro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 13px;   
+    margin-right: 50px;
+}
+
+.iconesRotulo {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 60px;
+    height: 90px; 
+    opacity: 0.7; /*opacidade so pra imgs*/   
+}
+
+.imgF {
+    padding: 6px;
+    display: flex; 
+    flex-direction: column;  
+    width: 60px;
+    height: 60px;    
+    background-color: rgba(105, 105, 105, 0);
+    border-radius: 50%;   
+}
+
+.imgF:hover{
+    border: solid #e67586 2px;
+    background-color: #df4960;
+ }
+
+.divRotuloNome{
+    font-weight: bold;
+    color: #ffffffcb;
+    font-family: 'Roboto', sans-serif;        
+}
+
+.iconesFiltro > div > img{
+    margin: auto;  
+}
+
+.divBusca > input{
+    min-height: 45px;
+    min-width: 700px;
+    border-radius: 22.5px 0px 0px 22.5px;
+    border: none;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif; 
+}
+
+.banner{
+    display: grid;
+    align-content: center;
+    justify-content: stretch;
+    gap: 7px;
+    margin: auto;
+    margin-bottom: 7px;
+    margin-top: 4px;
+    padding: 14px;
+    background-color: #f3f9fa;
+    min-width: 640px;
+    max-width: 640px;
+    min-height: 220px;
+    border-radius: 0px 0px 20px 0px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.19), inset 0px -4px 0 rgba(0, 0, 0, 0.205);
+    grid-template-columns: 205px auto;
+    grid-template-rows: 40% 20% 40%;
+    grid-template-areas: 
+        "foto nomeProd"
+        "foto precoProd"
+        "foto informante"
+    ;
+}
+
+.banner:hover{
+    background-color:rgba(221, 221, 221, 0.11);
+}
+
+.foto{
+    overflow: hidden;
+    grid-area: foto; 
+    border-radius: 3px;
+    display: flex;      
+}
+
+.nomeProduto{
+    grid-area: nomeProd;
+    padding: 7px;
+    display: flex;
+    justify-content: left;
+    font-size: 1.6em;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif; 
+}
+
+.precoProduto{
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.3em;
+    grid-area: precoProd;
+    font-family: 'Roboto', sans-serif;    
+}
+
+.divInformante{
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: informante;
+}
+
+.divInformante > div{
+    display: flex;
+    align-items: center;  
+}
+
+.divInformante > div > p{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Roboto', sans-serif; 
+}
+
+.fotoInformante{
+    display: flex;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    border: solid 2px black;   
+}
+
+.pesquisaButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 45px;
+    width: 60px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 22.5px 22.5px 0px;   
+}
+
+.alugarButton{
+    border-radius: 7px;
+    background-color: #df4960;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.137), 0 1px 10px 0 rgba(0, 0, 0, 0.096), inset 0 -3px 1px 0 rgba(0, 0, 0, 0.13);
+    height: 30px;
+    width: 100px;
+    font-size: 1.4em;
+    color: #e3eeff;
+}
+
+.alugarButton:hover{
+    background-color: #e67586 ;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.19), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.2);  
+}
+
+.alugarButton > div{
+    margin-top: -8px;
+    font-size: 0.65em;
+    font-family: 'Roboto', sans-serif;  
+}
+
+.footer{
+    align-items: center;
+    background-color:#abb6c718;
+    min-width: 100%;
+    height: 50px; 
+    color: rgba(29, 29, 29, 0.356);
+    text-align: center;
+    padding: 4px;
+    gap: 3px;
+    margin-bottom: 0px;
+}
+
+h4, h5, h6, a{
+    font-family: 'Roboto', sans-serif; 
+}
+
+.iconesMedia{
+    box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.068);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#abb6c718;
+    min-width: 100%;
+    height: 50px;
+    color: rgba(29, 29, 29, 0.808);
+    gap: 15px;
+    color: gray;
+}
+
+.iconesMedia > div{
+    font-family: 'Roboto', sans-serif; 
+}
+
+.informes{
+    display: flex;
+    text-align: center;
+    gap: 15px;
+    color: gray;
+    font-size: 0.7em;
+}
+
+.informes > div{
+    font-family: 'Roboto', sans-serif; 
+}
+
+.botaoRolar{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.308);
+    bottom: 130px;
+    right: 30px;
+    opacity: 0.8;
+}
+
+.principal:hover {
+    opacity: 1;
+}
+
