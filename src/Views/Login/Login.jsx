@@ -1,5 +1,8 @@
 import React from 'react';
 import FooterComponent from '../EndPag/footer';
+import logo from '../../assets/images/logo.svg';
+import googleIcon from '../../assets/images/google-icon.svg'
+import '../IsLogged/IsLogged.css'
 
 const Login = (props) => {
     const {
@@ -19,7 +22,14 @@ const Login = (props) => {
         <div>
         <section className = 'login'>
             <div className= 'loginContainer'>
-                <label>Username</label>
+                <img src ={logo} alt="Logo da plataforma"/>
+                <strong>Acesse sua conta</strong>
+                <button className="create-room">
+                    <img src={googleIcon} alt="logo Google" />
+                    Entrar com o Google
+                </button>
+                <div className="separator">Ou</div>
+                <label>E-mail</label>
                 <input 
                     type = 'text'
                     autoFocus
@@ -28,7 +38,7 @@ const Login = (props) => {
                     onChange = {(e) => setEmail(e.target.value)}
                 />
                 <p className="errorMsg">{emailError}</p>
-                <label>Password</label>
+                <label>Senha</label>
                 <input 
                     type = "password" 
                     required 
@@ -37,15 +47,15 @@ const Login = (props) => {
                 />
                 <p className="errorMsg">{passwordError}</p>
                 <div className="btnContainer">
-                    {hasAccount ? (
+                    {!hasAccount ? (
                         <>
-                            <button onClick={handleLogin}>Sign in</button>
-                            <p>Don't have an account ? <span onClick={() => setHasAccount(!hasAccount)}>Sign up</span></p>
+                            <button onClick={handleLogin} className="BotaoEntrar">Entrar</button>
+                            <p> Não tem uma conta? <span onClick={() => setHasAccount(!hasAccount)}>Cadastre-se</span></p>
                         </>
                     ) : (
                         <>
-                            <button onClick={handleSignup}>Sign up</button>
-                            <p>Have an account ? <span onClick={() => setHasAccount(!hasAccount)}>Sign in</span></p>
+                            <button onClick={handleSignup} className="BotaoEntrar">Cadastrar</button>
+                            <p>Já tem uma conta? <span onClick={() => setHasAccount(!hasAccount)}>Entrar</span></p>
                         </>
                     )}
                 </div>

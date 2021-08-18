@@ -3,6 +3,7 @@ import fire from '../../firebase';
 import Login from '../Login/Login';
 import Hero from '../Hero/Hero';
 import './IsLogged.css';
+import { Redirect } from 'react-router-dom';
 
 
 const IsLogged = () => {
@@ -83,11 +84,14 @@ const IsLogged = () => {
     authListener();
   }, [authListener]);
 
+  if (user) {
+    return(
+      <Redirect to="/endPag" />
+    );
+  }
+
   return (
     <div className = 'IsLogged'>
-      {user ? (
-        <Hero handleLogout = {handleLogout}/>
-      ) : (
         <Login
           email = {email}
           setEmail = {setEmail}
@@ -100,7 +104,6 @@ const IsLogged = () => {
           emailError = {emailError}
           passwordError = {passwordError}
         />
-      )}
     </div>
   );
 };
