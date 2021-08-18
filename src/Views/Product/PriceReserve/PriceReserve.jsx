@@ -3,7 +3,6 @@ import './style.css'
 import { HiOutlineHeart, HiHeart } from "react-icons/hi"
 import Calendar from "../Calendar/calendar";
 
-const price = 50
 function ChangeIcone({status}) {
   const [ico, setIco] = useState(status);  
   return (   
@@ -15,21 +14,21 @@ function ChangeIcone({status}) {
     </div>
   )};
 
-function PriceReserve() {
+function PriceReserve(props) {
   return( 
         <React.Fragment>
           <div className = "containerPrice">
             <div className = "titlePrice">
-                  <h1>Bateria Acústica Premium</h1>
+                  <h1>{props.nome}</h1>
                   <div><ChangeIcone status={true}/></div>
                 </div>
                 <div className = "delivery">Realizo Entrega</div>
                 <div className = "price">
                     <h3>Valor Diário</h3>
-                    <h2>R$ {price}</h2>
+                    <h2>R$ {props.preco}</h2>
             </div>
             <div className = "calendarPrice">
-            <Calendar/> 
+            <Calendar preco={props.preco} /> 
             </div>
             <div className = "availability">
                 <button>Verificar Disponibilidade</button>

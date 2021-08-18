@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom/cjs/react-router-dom.min";
 import DrumsKit from "./Images/drumsKit.jpg"
 import Description from "./Description/Description";
 import Warranty from "./Warranty/Warranty";
@@ -8,7 +9,7 @@ import UsersComments from "./UsersComments/UsersComments"
 import './style.css'
 //import { IconName } from "react-icons/hi";
 
-const Product = () => {
+const Product = (props) => {
     return (   
         <section className="product">
         <div className="container">
@@ -19,12 +20,12 @@ const Product = () => {
                 <div className="panel">
                     <div className="coluna1">
                         <div className="image">
-                            <img className="product-img" alt="drumskit" src={DrumsKit}></img>
+                            <img className="product-img" alt="drumskit" src={props.location.state.props.imagem}></img>
                         </div>
                         <div className="description"><Description /></div>           
                     </div>
                     <div className="coluna2">
-                    <div className="price-availability"><PriceReserve/></div>
+                    <div className="price-availability"><PriceReserve nome={props.location.state.props.produtoNome} preco={props.location.state.props.bannerPreco} /></div>
                     <div className="locator-info"><LocatorInfo /></div> 
                     <div className="warranty"><Warranty /></div>                   
                     <div className="warranty"><Warranty /></div>
@@ -43,6 +44,6 @@ const Product = () => {
 };
 
 
-export default Product;
+export default withRouter(Product);
 
 

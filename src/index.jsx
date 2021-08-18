@@ -18,7 +18,7 @@ function PlataformRotas() {
       <Navbar />
         <Switch>
           <Route component={UserProfile} exact path="/profile" />
-          <Route component={Product} exact path="/product" />
+          <Route component={Product} exact path="/product" render={(props) => <Product {...props} />} />
           <Route component={EndPag} exact path="/endPag" />
       </Switch>
     </Router>
