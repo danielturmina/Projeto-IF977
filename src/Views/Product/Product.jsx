@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { withRouter } from "react-router-dom/cjs/react-router-dom.min";
 import DrumsKit from "./Images/drumsKit.jpg"
 import Description from "./Description/Description";
@@ -10,6 +10,11 @@ import './style.css'
 //import { IconName } from "react-icons/hi";
 
 const Product = (props) => {
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, []) 
+
     return (   
         <section className="product">
         <div className="container">
