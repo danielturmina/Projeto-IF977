@@ -87,7 +87,7 @@ export default function Index() {
                 </div>
                 <div className = 'meio'>
                     {produtos.map((produto) => (
-                        <BannerComponent key={produto.id} imagem={produto.imagem} produtoNome={produto.nome} bannerPreco={produto.preco} usuario={produto.usuario}/>
+                        <BannerComponent key={produto.id} imagem={produto.imagem} descricao={produto.descricao} produtoNome={produto.nome} bannerPreco={produto.preco} usuario={produto.usuario}/>
                     ))}
                 </div>
 

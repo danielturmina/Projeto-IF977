@@ -1,11 +1,9 @@
-import React, {useState} from "react";
+import React from "react";
 import { Link } from 'react-router-dom';
 import './endPag.css'
 import fotoUsuario from './imgs/ico_perfil.png'
 
 export default function BannerComponent(props){
-
-
     return(
         <div className = 'banner'> 
             
