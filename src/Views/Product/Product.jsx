@@ -22,7 +22,7 @@ const Product = (props) => {
                         <div className="image">
                             <img className="product-img" alt="drumskit" src={props.location.state.props.imagem}></img>
                         </div>
-                        <div className="description"><Description /></div>           
+                        <div className="description"><Description descricao={props.location.state.props.descricao} /></div>           
                     </div>
                     <div className="coluna2">
                     <div className="price-availability"><PriceReserve nome={props.location.state.props.produtoNome} preco={props.location.state.props.bannerPreco} /></div>
