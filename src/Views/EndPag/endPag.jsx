@@ -33,6 +33,12 @@ export default function Index() {
         getProdutos();
     }, [])
 
+    
+    const rolar = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+        console.log('verificar erro no console')
+        }
+    /*https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo#Example*/
 
     return (
         
@@ -89,7 +95,7 @@ export default function Index() {
                 </div>
 
                 <div className = 'botaoRolar'>
-
+                        <button onClick={rolar}>SUBIR</button>
                 </div>
             
             </div>

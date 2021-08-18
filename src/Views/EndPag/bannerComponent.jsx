@@ -1,7 +1,6 @@
 import React from "react";
 import './endPag.css'
-import fotoUsuario from './imgs/ico_perfil.png' //props
-import imgProduto from './imgs/img_n_disp.png' //props
+import fotoUsuario from './imgs/ico_perfil.png'
 
 export default function BannerComponent(props){
     return(
