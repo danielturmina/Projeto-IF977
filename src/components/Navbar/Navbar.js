@@ -9,11 +9,10 @@ const Navbar = () => {
         setClicked(!clicked);
     }
 
-
         const MenuItems = [
             {
                 title: 'Home',
-                url: '#',
+                url: '/',
                 cName: 'nav-links'
             },
             {
@@ -28,7 +27,7 @@ const Navbar = () => {
             },
             {
                 title: 'Entrar',
-                url: '/',
+                url: '/login',
                 cName: 'nav-links-mobile'
             }
         

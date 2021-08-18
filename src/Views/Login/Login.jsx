@@ -1,11 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import FooterComponent from '../EndPag/footer';
-=======
 import logo from '../../assets/images/logo.svg';
 import googleIcon from '../../assets/images/google-icon.svg'
 import '../IsLogged/IsLogged.css'
->>>>>>> 7b58b5f... Commit da Feature Navbar+Login
 
 const Login = (props) => {
     const {

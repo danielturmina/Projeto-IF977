@@ -18,6 +18,8 @@ function PlataformRotas() {
       <Navbar />
         <Switch>
           <Route component={UserProfile} exact path="/profile" />
+          <Route component={Product} exact path="/product" />
+          <Route component={EndPag} exact path="/endPag" />
       </Switch>
     </Router>
   );
@@ -28,12 +30,8 @@ function App() {
       <>
         <Router>
           <Switch>
-            <Route component={IsLogged} exact path="/" />
-            <Route component={UserProfile} exact path="/profile" />
-            <Route component={Product} exact path="/product" />
-            <Route component={EndPag} exact path="/endpag" />
-            <Route path="/(profile)" component={PlataformRotas} />
-            
+            <Route component={IsLogged} exact path="/login" />
+            <Route component={PlataformRotas} path="/(profile|product|endPag)"/>
           </Switch>
         </Router>
         <GlobalStyle />
