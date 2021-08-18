@@ -31,7 +31,7 @@ const Product = () => {
                     <div className="warranty"><Warranty /></div>
                     </div>
                 </div>
-                <div className="container">
+                <div className="product-page-comments-container">
                     <UsersComments />
                 </div>
         </div>
