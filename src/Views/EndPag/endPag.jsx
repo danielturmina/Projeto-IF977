@@ -9,7 +9,6 @@ import imgFesta from './imgs/ico_festa.png'
 import imgFerramentas from './imgs/ico_ferramentas.png'
 import imgEsportes from './imgs/ico_esportes.png' 
 import imgEletronicos from './imgs/ico_eletronicos.png' 
-import imgUsuario from './imgs/ico_usuario.png'
 import imgLogo from './imgs/ico_logo.png'
 import BannerComponent from './bannerComponent'
 import firebase from "../../firebase";
@@ -43,9 +42,7 @@ export default function Index() {
     return (
         
         <>
-
             <div className = 'principal'>
-                
                 <div className = 'filtroProcura'>
                     <div className = 'imgLogo'><img src={imgLogo}alt="logo" /></div>
                     <div>

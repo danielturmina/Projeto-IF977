@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import DateRangePicker from '@wojtekmaj/react-daterange-picker';
 import './style.css';
 
-function Calendar() {
+function Calendar(props) {
   const [value, onChange] = useState([new Date(), new Date()]);
-  const price = 50
+  const price = props.preco
   var calculate = 0
   function calculateDay(value) {
     if (value === null) {
