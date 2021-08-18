@@ -80,7 +80,7 @@
   background: #111;
 }
 
-input {
+.loginContainer input {
   outline: none;
   position: relative !important;
   border-style: solid !important;
@@ -97,7 +97,7 @@ input {
   box-sizing: border-box !important;
 }
 
-label {
+.loginContainer label {
   margin-top: 15px;
   font-size: 16px;
   font-weight: bold;
@@ -107,7 +107,7 @@ label {
   align-items: left;
 }
 
-.BotaoEntrar {
+.loginContainer .BotaoEntrar {
   margin-top: 20px;
   height: 50px;
   width: 250px;
@@ -126,13 +126,13 @@ label {
   transition: filter 0.2s;
 }
 
-.btnContainer p {
+.loginContainer .btnContainer p {
   margin-top: 10px;
   align-items: center;
   
 }
 
-.btnContainer span {
+.loginContainer .btnContainer span {
   color: rgb(10, 34, 214);
   font-weight: 600;
   cursor: pointer;
