@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import { withRouter } from "react-router-dom/cjs/react-router-dom.min";
-import DrumsKit from "./Images/drumsKit.jpg"
 import Description from "./Description/Description";
 import Warranty from "./Warranty/Warranty";
 import LocatorInfo from "./LocatorInfo/LocatorInfo";
@@ -25,7 +24,7 @@ const Product = (props) => {
                 <div className="panel">
                     <div className="coluna1">
                         <div className="image">
-                            <img className="product-img" alt="drumskit" src={props.location.state.props.imagem}></img>
+                            <img className="product-img" alt="firebase_image" src={props.location.state.props.imagem}></img>
                         </div>
                         <div className="description"><Description descricao={props.location.state.props.descricao} /></div>           
                     </div>
