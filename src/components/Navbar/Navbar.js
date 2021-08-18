@@ -1,17 +1,14 @@
-import react, { Component } from 'react';
+import react, { useState, Component } from 'react';
 import './Navbar.css';
-import { Button } from '../Button/Button';
-import { Link } from 'react-router-dom';
+import logo from '../../assets/images/logo.svg';
 
-class Navbar extends Component {
-    state = { clicked: false }
+const Navbar = () => {
+    const [clicked,setClicked] = useState(false);
 
-    handleClick = () => {
-        this.setState({ clicked: !this.state.clicked})
+    const handleClick = () => {
+        setClicked(!clicked);
     }
 
-
-    render() {
 
         const MenuItems = [
             {
@@ -25,12 +22,12 @@ class Navbar extends Component {
                 cName: 'nav-links'
             },
             {
-                title: 'Categorias',
+                title: 'Anunciar',
                 url: '#',
                 cName: 'nav-links'
             },
             {
-                title: 'Sign up',
+                title: 'Entrar',
                 url: '/',
                 cName: 'nav-links-mobile'
             }
@@ -38,15 +35,15 @@ class Navbar extends Component {
         ]
 
         return (
-            
+            <section>
             <nav className="NavbarItems">
                 
-                <h1 className="navbar-logo">PickBorrow<i className="fab fa-react"></i></h1>
-                <div className="menu-icon" onClick={this.handleClick}>
-                    <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'} />
+                <h1 className="navbar-logo">Vai e Volta<img src ={logo} alt="Logo da plataforma"/></h1>
+                <div className="menu-icon" onClick={handleClick}>
+                    <i className={clicked ? 'fas fa-times' : 'fas fa-bars'} />
                     
                 </div>
-                <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
+                <ul className={clicked ? 'nav-menu active' : 'nav-menu'}>
 
                     {MenuItems.map((item, index) => {
                         return (
@@ -58,12 +55,11 @@ class Navbar extends Component {
                         )
                     })} 
                 </ul>
-                <Link to='/'>
-                  <Button>Sign Up </Button>
-                </Link>
+                    
             </nav>
+            
+            </section>
         )
-    }
 }
 
 export default Navbar;

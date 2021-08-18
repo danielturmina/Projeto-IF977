@@ -12,17 +12,28 @@ import EndPag from './Views/EndPag/endPag';
 import FooterComponent from './Views/EndPag/footer';
 
 
+function PlataformRotas() {
+  return (
+    <Router>
+      <Navbar />
+        <Switch>
+          <Route component={UserProfile} exact path="/profile" />
+      </Switch>
+    </Router>
+  );
+}
 
 function App() {
   return (
       <>
         <Router>
-          <Navbar />
           <Switch>
             <Route component={IsLogged} exact path="/" />
             <Route component={UserProfile} exact path="/profile" />
             <Route component={Product} exact path="/product" />
             <Route component={EndPag} exact path="/endpag" />
+            <Route path="/(profile)" component={PlataformRotas} />
+            
           </Switch>
         </Router>
         <GlobalStyle />
