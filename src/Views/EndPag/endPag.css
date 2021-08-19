@@ -311,3 +311,7 @@ h4, h5, h6, a{
     opacity: 1;
 }
 
+.loading-component {
+    margin: 100px auto 0 auto;
+}
+

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
-import UserPhoto from './UserPhoto.png'
+import UserPhoto from './UserPhoto.png';
+import ReactLoading from 'react-loading';
 import firebase from "../../firebase";
 
 
@@ -7,15 +8,18 @@ import './style.css'
 
 const UserProfile = () => {
   const [produtos, setProdutos] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const ref = firebase.firestore().collection("produtos");
   
   function getProdutos() {
+      setIsLoading(true);
       ref.onSnapshot((querySnapshot) => {
           const items = [];
           querySnapshot.forEach((doc) => {
               items.push(doc.data())
           });
           setProdutos(items);
+          setIsLoading(false);
       });
   }
 
@@ -39,156 +43,38 @@ const UserProfile = () => {
   
           <div style={{ paddingLeft: '18px', paddingBottom: '10px', width: '100%', height: '480px', overflowY: 'scroll' }}>
             <div className = "user-profile-annoucement-container">
-                {produtos.map((produto) => (
-                    <div className="user-profile-annoucement-items" key={produto.id}>
-                      <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                    </div>
+              {isLoading? (
+                  <ReactLoading className="loading-component" color="#cc0041" />
+              ) : (
+                <>
+              {produtos.map((produto) => (
+                  <div className="user-profile-annoucement-items" key={produto.id}>
+                    <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
+                  </div>
                 ))}
                 {produtos.map((produto) => (
-                    <div className="user-profile-annoucement-items" key={produto.id}>
-                      <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                    </div>
-                ))}{produtos.map((produto) => (
                   <div className="user-profile-annoucement-items" key={produto.id}>
                     <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
                   </div>
-              ))}{produtos.map((produto) => (
-                <div className="user-profile-annoucement-items" key={produto.id}>
-                  <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                </div>
-            ))}{produtos.map((produto) => (
-              <div className="user-profile-annoucement-items" key={produto.id}>
-                <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-              </div>
-          ))}{produtos.map((produto) => (
-            <div className="user-profile-annoucement-items" key={produto.id}>
-              <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-            </div>
-        ))}{produtos.map((produto) => (
-          <div className="user-profile-annoucement-items" key={produto.id}>
-            <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-          </div>
-      ))}{produtos.map((produto) => (
-        <div className="user-profile-annoucement-items" key={produto.id}>
-          <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-        </div>
-    ))}{produtos.map((produto) => (
-                    <div className="user-profile-annoucement-items" key={produto.id}>
-                      <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                    </div>
-                ))}{produtos.map((produto) => (
+                ))}
+                {produtos.map((produto) => (
                   <div className="user-profile-annoucement-items" key={produto.id}>
                     <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
                   </div>
-              ))}{produtos.map((produto) => (
-                    <div className="user-profile-annoucement-items" key={produto.id}>
-                      <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                    </div>
-                ))}{produtos.map((produto) => (
-                    <div className="user-profile-annoucement-items" key={produto.id}>
-                      <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                    </div>
-                ))}{produtos.map((produto) => (
+                ))}
+                {produtos.map((produto) => (
                   <div className="user-profile-annoucement-items" key={produto.id}>
                     <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
                   </div>
-              ))}{produtos.map((produto) => (
-                    <div className="user-profile-annoucement-items" key={produto.id}>
-                      <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                    </div>
-                ))}{produtos.map((produto) => (
+                ))}
+                {produtos.map((produto) => (
                   <div className="user-profile-annoucement-items" key={produto.id}>
                     <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
                   </div>
-              ))}{produtos.map((produto) => (
-                <div className="user-profile-annoucement-items" key={produto.id}>
-                  <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                </div>
-            ))}{produtos.map((produto) => (
-              <div className="user-profile-annoucement-items" key={produto.id}>
-                <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-              </div>
-          ))}{produtos.map((produto) => (
-                    <div className="user-profile-annoucement-items" key={produto.id}>
-                      <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                    </div>
-                ))}{produtos.map((produto) => (
-                  <div className="user-profile-annoucement-items" key={produto.id}>
-                    <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                  </div>
-              ))}{produtos.map((produto) => (
-                <div className="user-profile-annoucement-items" key={produto.id}>
-                  <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                </div>
-            ))}{produtos.map((produto) => (
-                    <div className="user-profile-annoucement-items" key={produto.id}>
-                      <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                    </div>
-                ))}{produtos.map((produto) => (
-                  <div className="user-profile-annoucement-items" key={produto.id}>
-                    <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                  </div>
-              ))}{produtos.map((produto) => (
-                <div className="user-profile-annoucement-items" key={produto.id}>
-                  <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                </div>
-            ))}{produtos.map((produto) => (
-              <div className="user-profile-annoucement-items" key={produto.id}>
-                <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-              </div>
-          ))}{produtos.map((produto) => (
-            <div className="user-profile-annoucement-items" key={produto.id}>
-              <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-            </div>
-        ))}{produtos.map((produto) => (
-                    <div className="user-profile-annoucement-items" key={produto.id}>
-                      <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                    </div>
-                ))}{produtos.map((produto) => (
-                    <div className="user-profile-annoucement-items" key={produto.id}>
-                      <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                    </div>
-                ))}{produtos.map((produto) => (
-                    <div className="user-profile-annoucement-items" key={produto.id}>
-                      <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                    </div>
-                ))}{produtos.map((produto) => (
-                    <div className="user-profile-annoucement-items" key={produto.id}>
-                      <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                    </div>
-                ))}{produtos.map((produto) => (
-                  <div className="user-profile-annoucement-items" key={produto.id}>
-                    <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                  </div>
-              ))}{produtos.map((produto) => (
-                    <div className="user-profile-annoucement-items" key={produto.id}>
-                      <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                    </div>
-                ))}{produtos.map((produto) => (
-                  <div className="user-profile-annoucement-items" key={produto.id}>
-                    <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                  </div>
-              ))}{produtos.map((produto) => (
-                <div className="user-profile-annoucement-items" key={produto.id}>
-                  <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                </div>
-            ))}{produtos.map((produto) => (
-              <div className="user-profile-annoucement-items" key={produto.id}>
-                <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-              </div>
-          ))}{produtos.map((produto) => (
-                    <div className="user-profile-annoucement-items" key={produto.id}>
-                      <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                    </div>
-                ))}{produtos.map((produto) => (
-                  <div className="user-profile-annoucement-items" key={produto.id}>
-                    <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                  </div>
-              ))}{produtos.map((produto) => (
-                <div className="user-profile-annoucement-items" key={produto.id}>
-                  <img src={produto.imagem} width="100%" height="100%" style={{borderRadius: '10px'}} alt="" />
-                </div>
-            ))}
+                ))}
+                </>
+              )}
+                
             </div>
           </div>
         </div>
