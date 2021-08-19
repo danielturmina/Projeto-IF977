@@ -21,7 +21,7 @@ const Warranty = () => {
                 </span>
             </div>
         
-            <a id = "a3" href="J">Saiba mais sobre garantia</a>{ /* VER CAMINHO */'' }
+            <a id = "a3" href="/product">Saiba mais sobre garantia</a>
         </div>
     </React.Fragment>
     )

@@ -20,6 +20,7 @@
     padding: 0px;
     padding-right: 40px;
     padding-top: 2px;
+    border-style: none;
 }
 
 .delivery{
@@ -55,4 +56,5 @@
     font-weight: 500;
     font-size: 13px;
     width: fit-content;
+    border-style: none;
 }

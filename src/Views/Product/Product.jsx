@@ -18,8 +18,8 @@ const Product = (props) => {
         <section className="product">
         <div className="container">
             <div className="row">
-                <a className ="a1" href="W">Compartilhar</a> { /* VER CAMINHO */'' }
-                <a className ="a2" href="W">Anunciar uma igual</a> { /* VER CAMINHO */'' }
+                <a className ="a1" href="/product">Compartilhar</a>
+                <a className ="a2" href="/product">Anunciar uma igual</a> 
                 </div> 
                 <div className="panel">
                     <div className="coluna1">
