@@ -1,7 +1,5 @@
 import React from 'react';
-import FooterComponent from '../EndPag/footer';
 import logo from '../../assets/images/logo.svg';
-import googleIcon from '../../assets/images/google-icon.svg'
 import '../IsLogged/IsLogged.css'
 
 const Login = (props) => {
