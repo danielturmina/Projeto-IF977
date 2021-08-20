@@ -6,7 +6,6 @@ import LocatorInfo from "./LocatorInfo/LocatorInfo";
 import PriceReserve from "./PriceReserve/PriceReserve";
 import UsersComments from "./UsersComments/UsersComments"
 import './style.css'
-//import { IconName } from "react-icons/hi";
 
 const Product = (props) => {
 
