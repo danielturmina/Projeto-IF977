@@ -1,7 +1,5 @@
 import React from 'react';
-import FooterComponent from '../EndPag/footer';
 import logo from '../../assets/images/logo.svg';
-import googleIcon from '../../assets/images/google-icon.svg'
 import '../IsLogged/IsLogged.css'
 
 const Login = (props) => {
@@ -24,11 +22,6 @@ const Login = (props) => {
             <div className= 'loginContainer'>
                 <img src ={logo} alt="Logo da plataforma"/>
                 <strong>Acesse sua conta</strong>
-                <button className="create-room">
-                    <img src={googleIcon} alt="logo Google" />
-                    Entrar com o Google
-                </button>
-                <div className="separator">Ou</div>
                 <label>E-mail</label>
                 <input 
                     type = 'text'
@@ -61,7 +54,6 @@ const Login = (props) => {
                 </div>
             </div>
         </section>
-        <FooterComponent email='@cin.ufpe.br' nome='Fulano' />
         </div>
     );
 };
