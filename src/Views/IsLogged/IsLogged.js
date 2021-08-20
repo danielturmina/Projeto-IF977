@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import fire from '../../firebase';  
 import Login from '../Login/Login';
-import Hero from '../Hero/Hero';
 import './IsLogged.css';
 import { Redirect } from 'react-router-dom';
 
@@ -64,9 +63,9 @@ const IsLogged = () => {
         }
       });
   };
-  const handleLogout = () =>{
-    fire.auth().signOut();
-  };
+ // const handleLogout = () =>{
+   // fire.auth().signOut();
+  //};
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const authListener = () =>{

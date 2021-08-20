@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+import { Switch, BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 
 import GlobalStyle from './global/globalStyle';
 
@@ -32,6 +32,7 @@ function App() {
           <Switch>
             <Route component={IsLogged} exact path="/login" />
             <Route component={PlataformRotas} path="/(profile|product|endPag)"/>
+            <Redirect from="/" to="/endPag"/>
           </Switch>
         </Router>
         <GlobalStyle />

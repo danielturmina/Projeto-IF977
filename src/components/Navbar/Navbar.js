@@ -1,4 +1,4 @@
-import react, { useState, Component } from 'react';
+import { useState } from 'react';
 import './Navbar.css';
 import logo from '../../assets/images/logo.svg';
 
@@ -12,7 +12,7 @@ const Navbar = () => {
         const MenuItems = [
             {
                 title: 'Home',
-                url: '/',
+                url: '/endPag',
                 cName: 'nav-links'
             },
             {
