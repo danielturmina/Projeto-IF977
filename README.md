@@ -1,6 +1,7 @@
 # Plataforma WEB - 2V
 
 ## Link para a Plataforma
+https://if977-plataformaweb.firebaseapp.com/
 
 
 ## Link para a Publicação no Medium
