@@ -47,6 +47,7 @@ Foram realizados os Seguintes Teste:
 - Página do Produto: https://github.com/rocketseat-content/youtube-clone-mercadolivre
 - Página de Login: https://www.youtube.com/watch?v=cFgoSrOui2M
 - Calendário da Página de Produto: https://github.com/wojtekmaj/react-daterange-picker
+- Navbar: https://github.com/briancodex/react-navbar-dropdown
 
 Todos os códigos citados a cima, sofreram modificações de estrutura e de estilização para se adequar ao projeto da disciplina.
 
