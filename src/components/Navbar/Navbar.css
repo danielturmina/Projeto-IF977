@@ -1,5 +1,6 @@
 .NavbarItems {
     background: linear-gradient(90deg, rgb(110, 94, 245) 0%, rgba(73, 63, 252, 1) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#d0253f), to(#cc0041));
     height: 80px;
     display: flex;
     justify-content: center;
@@ -9,12 +10,13 @@
 
 
 .navbar-logo {
+    display: flex;
+    align-items: center;
     color: #fff;
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
 }
-
 
 .navbar-logo img {
     max-width: 40px;
@@ -41,11 +43,10 @@
     
 }
 
-
-
 .nav-links:hover {
-    background-color: #6d76f7;
-    border-radius: 4px;
+    background-color: #e67586 ;
+    color: white;
+    border-radius: 10px;
     transition: all 0.2s ease-out;
 }
 
@@ -59,15 +60,16 @@
     margin: 1rem auto;
     border-radius: 4px;
     width: 150px;
-    background: #4ad9e4;
+    background-color: #df495fb9;
+    border-radius: 10px;
     text-decoration: none;
-    color:#fff;
+    color: whitesmoke;
     font-size: 1.2rem;
 }
 
     .nav-links-mobile:hover {
-        background: #fff;
-        color: #6568F4;
+        background-color: #e67586 ;
+        color: white;
         transition: 250ms;
     }
 
@@ -95,7 +97,8 @@
     }
 
     .nav-menu.active {
-        background: #6668f4;
+        background-color: #e67586 ;
+        color: white;
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
@@ -111,7 +114,8 @@
     }
 
     .nav-links:hover {
-        background-color: #7577fa;
+        background-color: #e67586 ;
+        color: white;
         border-radius: 0;
     }
 

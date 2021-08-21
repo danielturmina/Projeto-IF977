@@ -242,6 +242,7 @@ a.pesquisaButton:hover{
     width: 100px;
     font-size: 1.4em;
     color: #e3eeff;
+    border: none;
 }
 
 .alugarButton:hover{
@@ -250,7 +251,6 @@ a.pesquisaButton:hover{
 }
 
 .alugarButton > div{
-    margin-top: -8px;
     font-size: 0.65em;
     font-family: 'Roboto', sans-serif;  
 }
