@@ -11,6 +11,7 @@ import imgEsportes from './imgs/ico_esportes.png'
 import imgEletronicos from './imgs/ico_eletronicos.png' 
 import imgUsuario from './imgs/ico_usuario.png'
 import imgLogo from './imgs/ico_logo.png'
+import imgSubir from './imgs/ico_Subir.png'
 import BannerComponent from './bannerComponent'
 import firebase from "../../firebase";
 
@@ -94,8 +95,8 @@ export default function Index() {
                     ))}
                 </div>
 
-                <div className = 'botaoRolar'>
-                        <button onClick={rolar}>SUBIR</button>
+                <div className = 'botaoRolar' onClick = {rolar}>
+                        <div><img src={imgSubir} alt="" /></div>
                 </div>
             
             </div>
