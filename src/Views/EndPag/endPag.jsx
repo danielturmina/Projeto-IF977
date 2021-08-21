@@ -43,7 +43,6 @@ export default function Index() {
         window.scrollTo({ top: 0, behavior: 'smooth' })
         console.log('verificar erro no console')
         }
-    /*https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo#Example*/
 
     return (
         <>
@@ -95,9 +94,9 @@ export default function Index() {
                         <ReactLoading className="loading-component" color="#cc0041" />
                     ) : (
                         <>
-                            {produtos.map((produto) => (
-                                <BannerComponent key={produto.id} imagem={produto.imagem} descricao={produto.descricao} produtoNome={produto.nome} bannerPreco={produto.preco} usuario={produto.usuario}/>
-                            ))}
+                            {produtos.map((produto) => ( 
+                                (<BannerComponent key={produto.id} imagem={produto.imagem} descricao={produto.descricao} produtoNome={produto.nome.toUpperCase()} bannerPreco={produto.preco} usuario={produto.usuario}/>)
+                            ))}        
                         </>
                     )}
 
@@ -106,7 +105,7 @@ export default function Index() {
                 <div className = 'botaoRolar' onClick = {rolar}>
                         <div><img src={imgSubir} alt="" /></div>
                 </div>
-            
+                
             </div>
         </>
     )

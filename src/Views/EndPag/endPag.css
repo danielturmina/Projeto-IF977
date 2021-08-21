@@ -179,7 +179,7 @@ a.pesquisaButton:hover{
     padding: 7px;
     display: flex;
     justify-content: left;
-    font-size: 1.6em;
+    font-size: 1.75em;
     text-align: justify;
     font-family: 'Roboto', sans-serif; 
 }

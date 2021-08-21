@@ -79,5 +79,35 @@ describe('Teste - Plataforma WEB - 2V', () => {
     cy.get(':nth-child(5) > .divInformante > a > .alugarButton').click()
     cy.get('.description p').contains('cabana pouco usada')
   })
+
+  it('Teste - Conferindo botao rolar', () => {
+    cy.wait(3000)
+    cy.scrollTo(0, '100%')
+    cy.get('.botaoRolar').click()
+  })
+  
+  it('Teste - Conferindo campo de pesquisa', () => {
+    cy.get('input').click()
+    cy.get('input').type('Hello, World')
+  })
+
+  it('Teste - Conferindo valores dos produtos', () => {
+    cy.get('input').click()
+    cy.get('input').type('Hello, World')
+    cy.get(':nth-child(1) > .nomeProduto').invoke('text').then(($value) => {
+      cy.log($value)
+    })
+    cy.get(':nth-child(1) > .precoProduto').invoke('text').then(($value) => {
+      cy.log($value)
+    })
+    cy.get(':nth-child(1) > .divInformante > a > .alugarButton').click()
+    cy.get('.titlePrice > h1').invoke('text').then(($value) => {
+      cy.log($value)
+    })
+    cy.get('.price > h2').invoke('text').then(($value) => {
+      cy.log($value)
+    }) 
+
+  })
   
 })
