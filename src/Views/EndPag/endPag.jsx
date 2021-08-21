@@ -9,24 +9,28 @@ import imgFesta from './imgs/ico_festa.png'
 import imgFerramentas from './imgs/ico_ferramentas.png'
 import imgEsportes from './imgs/ico_esportes.png' 
 import imgEletronicos from './imgs/ico_eletronicos.png' 
-import imgUsuario from './imgs/ico_usuario.png'
 import imgLogo from './imgs/ico_logo.png'
 import imgSubir from './imgs/ico_Subir.png'
 import BannerComponent from './bannerComponent'
+import ReactLoading from 'react-loading';
 import firebase from "../../firebase";
 
 export default function Index() {
     const [produtos, setProdutos] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
 
     const ref = firebase.firestore().collection("produtos");
     
     function getProdutos() {
+        setIsLoading(true);
         ref.onSnapshot((querySnapshot) => {
             const items = [];
             querySnapshot.forEach((doc) => {
                 items.push(doc.data())
             });
             setProdutos(items);
+            setIsLoading(false);
         });
     }
 
@@ -42,11 +46,8 @@ export default function Index() {
     /*https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo#Example*/
 
     return (
-        
         <>
-
             <div className = 'principal'>
-                
                 <div className = 'filtroProcura'>
                     <div className = 'imgLogo'><img src={imgLogo}alt="logo" /></div>
                     <div>
@@ -90,9 +91,16 @@ export default function Index() {
                     </div>
                 </div>
                 <div className = 'meio'>
-                    {produtos.map((produto) => (
-                        <BannerComponent key={produto.id} imagem={produto.imagem} produtoNome={produto.nome} bannerPreco={produto.preco} usuario={produto.usuario}/>
-                    ))}
+                    {isLoading ? (
+                        <ReactLoading className="loading-component" color="#cc0041" />
+                    ) : (
+                        <>
+                            {produtos.map((produto) => (
+                                <BannerComponent key={produto.id} imagem={produto.imagem} descricao={produto.descricao} produtoNome={produto.nome} bannerPreco={produto.preco} usuario={produto.usuario}/>
+                            ))}
+                        </>
+                    )}
+
                 </div>
 
                 <div className = 'botaoRolar' onClick = {rolar}>
@@ -100,7 +108,6 @@ export default function Index() {
                 </div>
             
             </div>
-
         </>
     )
 }

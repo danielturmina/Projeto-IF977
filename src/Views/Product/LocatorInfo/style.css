@@ -1,14 +1,14 @@
+.titleLocator{
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
 .containerLocator{
   padding: 48px 32px;
   display: flex;
   flex-direction: column;
   border-top: 1px solid gray;
-}
-
-.titleLocator{
-  font-size: 18px;
-  margin-bottom: 20px;
-  font-weight: 600;
 }
 
 .location{

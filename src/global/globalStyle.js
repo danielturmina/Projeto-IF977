@@ -42,11 +42,11 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    width: .4rem;
+    width: .6rem;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #8E7AD6;
+    background: #df4960;
     border-radius: .3rem;
   }
 `;
