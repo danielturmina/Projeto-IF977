@@ -14,7 +14,7 @@ https://if977-plataformaweb.firebaseapp.com/
 
 <br></br>
 <p align="center">
-  <img src="src\Views\EndPag\imgs\ico_logo.png" width="200">
+  <img src="src\Views\EndPag\imgs\logoReadme.png" width="200">
 </p>
 <br></br>
 
