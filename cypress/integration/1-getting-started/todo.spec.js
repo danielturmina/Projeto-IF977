@@ -91,23 +91,23 @@ describe('Teste - Plataforma WEB - 2V', () => {
     cy.get('input').type('Hello, World')
   })
 
-  it('Teste - Conferindo valores dos produtos', () => {
-    cy.get('input').click()
-    cy.get('input').type('Hello, World')
-    cy.get(':nth-child(1) > .nomeProduto').invoke('text').then(($value) => {
-      cy.log($value)
+  it('Teste - Conferindo o filtro musica', () => {
+    cy.get(':nth-child(6) > .imgF > img').click()
+    cy.get('.meio > :nth-child(1)').contains('GUITARRA')
+    cy.get('.meio > :nth-child(2)').contains('BATERIA')
+    cy.get('.meio > :nth-child(3)').contains('VIOLINO')
+  })
+
+  it('Teste - Conferindo igualdade entre home e pagina do produto', () => {
+
+    cy.get(':nth-child(1) > .nomeProduto').invoke('text').then(($value_1) => {
+      cy.get(':nth-child(1) > .divInformante > a > .alugarButton').click()
+      cy.get('.titlePrice > h1').invoke('text').then(($value_2) => { 
+        expect($value_1).to.eq($value_2)}
+        )
+
     })
-    cy.get(':nth-child(1) > .precoProduto').invoke('text').then(($value) => {
-      cy.log($value)
-    })
-    cy.get(':nth-child(1) > .divInformante > a > .alugarButton').click()
-    cy.get('.titlePrice > h1').invoke('text').then(($value) => {
-      cy.log($value)
-    })
-    cy.get('.price > h2').invoke('text').then(($value) => {
-      cy.log($value)
-    }) 
 
   })
-  
+
 })
