@@ -95,7 +95,6 @@ ou
 yarn install </pre> 
 
 - Execute:
-- Instale as depedências do ReactJs:
 <pre> npm start
 ou
 yarn start </pre> 
