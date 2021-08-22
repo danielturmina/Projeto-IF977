@@ -18,7 +18,7 @@ import firebase from "../../firebase";
 export default function Index() {
     const [produtos, setProdutos] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-
+    const [valor, setValor] = useState('generico')
 
     const ref = firebase.firestore().collection("produtos");
     
@@ -38,10 +38,47 @@ export default function Index() {
         getProdutos();
     }, [])
 
+    /*vou tentar organizar e compactar em array as funções abaixo, a ideia é que fique como esse modelo que criei abaixo*/
+    const filtroComArraysTentarDepois = (tipo) => {
+        var nomesFiltros = ['camping', 'eletronica', 'esportes', 'ferramentas', 'festa', 'musica', 'roupas']
+        setValor(nomesFiltros[tipo])
+         
+    }
+
+    const filtro1 = () => {
+        setValor('camping')
+    }
     
+    const filtro2 = () => {
+        setValor('eletronica')
+    }
+
+    const filtro3 = () => {
+        setValor('esportes')
+    }
+
+    const filtro4 = () => {
+        setValor('ferramentas')
+    }
+
+    const filtro5 = () => {
+        setValor('festa')
+    }
+
+    const filtro6 = () => {
+        setValor('musica')
+    }
+
+    const filtro7 = () => {
+        setValor('roupa')
+    }
+
+    const filtro = () => {
+        setValor('generico')
+    }
+
     const rolar = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
-        console.log('verificar erro no console')
         }
 
     return (
@@ -57,47 +94,45 @@ export default function Index() {
                             <a href = "locahost:3000/" className = "carrinhoButton"><img src={imgCarrinho}alt="carrinho" /></a>
                         </div>
                         <div className = 'iconesFiltro'>
-                            <a href = "localhost:3000/" className = 'iconesRotulo'>
-                                <div className = 'imgF'> <img src={imgCamping} alt="camping" /> </div>
-                                <div className = "divRotuloNome">Camping</div>
-                            </a>
-                            <a href = "localhost:3000/" className = 'iconesRotulo'>
-                                <div className = 'imgF'> <img src={imgEletronicos} alt="eletronicos" /> </div>
-                                <div className = "divRotuloNome">Eletrônica</div>
-                            </a>
-                            <a href = "localhost:3000/" className = 'iconesRotulo'>
-                                <div className = 'imgF'> <img src={imgEsportes} alt="esportes" /> </div>
-                                <div className = "divRotuloNome">Esportes</div>
-                            </a>
-                            <a href = "localhost:3000/" className = 'iconesRotulo'>
-                                <div className = 'imgF'> <img src={imgFerramentas}  alt="ferramentas" /> </div>
-                                <div className = "divRotuloNome">Ferramentas</div>
-                            </a>
-                            <a href = "localhost:3000/" className = 'iconesRotulo'>
-                                <div className = 'imgF'> <img src={imgFesta} alt="festa" /> </div>
-                                <div className = "divRotuloNome">Festa</div>
-                            </a>
-                            <a href = "localhost:3000/" className = 'iconesRotulo'>
-                                <div className = 'imgF'> <img src={imgMusica} alt="musica" />
+                            <div className = 'iconesRotulo'>
+                                <div className = 'imgF' onClick = {filtro1}> <img src={imgCamping} alt="camping" /> </div>
+                                <div className = "divRotuloNome" onClick = {filtro1}>Camping</div>
+                            </div>
+                            <div className = 'iconesRotulo'>
+                                <div className = 'imgF' onClick = {filtro2}> <img src={imgEletronicos} alt="eletronicos" /> </div>
+                                <div className = "divRotuloNome" onClick = {filtro2}>Eletrônica</div>
+                            </div>
+                            <div className = 'iconesRotulo'>
+                                <div className = 'imgF' onClick = {filtro3}> <img src={imgEsportes} alt="esportes" /> </div>
+                                <div className = "divRotuloNome" onClick = {filtro3}>Esportes</div>
+                            </div>
+                            <div className = 'iconesRotulo'>
+                                <div className = 'imgF' onClick = {filtro4}> <img src={imgFerramentas}  alt="ferramentas" /> </div>
+                                <div className = "divRotuloNome" onClick = {filtro4}>Ferramentas</div>
+                            </div>
+                            <div className = 'iconesRotulo'>
+                                <div className = 'imgF' onClick = {filtro5}> <img src={imgFesta} alt="festa" /> </div>
+                                <div className = "divRotuloNome" onClick = {filtro5}>Festa</div>
+                            </div>
+                            <div className = 'iconesRotulo'>
+                                <div className = 'imgF' onClick = {filtro6}> <img src={imgMusica} alt="musica" />
                                 </div>
-                                <div className = "divRotuloNome">Musica</div>
-                            </a>
-                            <a href = "localhost:3000/" className = 'iconesRotulo'>
-                                <div className = 'imgF'> <img src={imgRoupas} alt="roupas" /> </div>
-                                <div className = "divRotuloNome">Roupas</div>
-                            </a>
+                                <div className = "divRotuloNome" onClick = {filtro6}>Musica</div>
+                            </div>
+                            <div className = 'iconesRotulo'>
+                                <div className = 'imgF' onClick = {filtro7}> <img src={imgRoupas} alt="roupas" /> </div>
+                                <div className = "divRotuloNome" onClick = {filtro7}>Roupas</div>
+                            </div>
+                            <div className = 'iconesRotulo limpaFiltro'>
+                                <div className = "divRotuloNome" onClick = {filtro}>Limpar Filtro</div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className = 'meio'>
-                    {isLoading ? (
-                        <ReactLoading className="loading-component" color="#cc0041" />
-                    ) : (
-                        <>
-                            {produtos.map((produto) => ( 
-                                (<BannerComponent key={produto.id} imagem={produto.imagem} descricao={produto.descricao} produtoNome={produto.nome.toUpperCase()} bannerPreco={produto.preco} usuario={produto.usuario}/>)
-                            ))}        
-                        </>
+
+                    {produtos.map((produto) => (produto.tipo.includes(valor) ? ((<BannerComponent key={produto.id} imagem={produto.imagem} descricao={produto.descricao} produtoNome={produto.nome.toUpperCase()} bannerPreco={produto.preco} usuario={produto.usuario}/>)) : console.log(''))
+                    
                     )}
 
                 </div>
