@@ -1,7 +1,7 @@
 .NavbarItems {
     background: linear-gradient(90deg, rgb(110, 94, 245) 0%, rgba(73, 63, 252, 1) 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, from(#d0253f), to(#cc0041));
-    height: 80px;
+    height: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
