@@ -102,6 +102,7 @@ a.pesquisaButton:hover{
     width: 60px;
     height: 90px; 
     opacity: 0.7; /*opacidade so pra imgs*/   
+    cursor: pointer;
 }
 
 .imgF {
@@ -122,7 +123,14 @@ a.pesquisaButton:hover{
 .divRotuloNome{
     font-weight: bold;
     color: #ffffffcb;
-    font-family: 'Roboto', sans-serif;        
+    font-family: 'Roboto', sans-serif;  
+    text-align: center;
+}
+
+.limpaFiltro {
+    margin-bottom: 0px;
+    align-items: center;
+    font-size: 0.8em;
 }
 
 .iconesFiltro > div > img{
