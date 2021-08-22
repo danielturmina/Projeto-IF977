@@ -41,6 +41,10 @@ Foram realizados os Seguintes Teste:
 - Conferir Calculo dos Valores com base no Preço e Dias selecionados.
 - Conferir Titulo do Produto
 - Conferir Descrição do Produto
+- Conferir Botão rolar da página home.
+- Conferir Filtro de busca com categoria música.
+- Equiparar informações do "nome do produto" e "preço" entre página produto e home.
+- Conferir campo de pesquisa na barra de busca.
 
 ## Códigos Prontos - Reaproveitados
 
@@ -82,7 +86,7 @@ Tendo em vista que o projeto pode evoluir bastante, abaixo serão discriminados 
 - Criação de Link para Permitir Compartilhar o Produto
 - Aprimorar Campo de Buscas
 - Aprimorar Login do Usuário (Permitir Login com conta do GMAIL)
-- Permitir Fitrar Produtos (Por Categoria, Valor, Localização e Disponibilidade)
+- Permitir novos filtros além do já criado "Categoria de Produto" (Valor, Localização)
 
 
 ## Time
