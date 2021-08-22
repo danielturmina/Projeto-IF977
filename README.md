@@ -94,12 +94,12 @@ Tendo em vista que o projeto pode evoluir bastante, abaixo serão discriminados 
 <pre>git clone https://github.com/danielturmina/Projeto-IF977</pre> 
 
 - Instale as depedências do ReactJs:
-<pre> npm install
+<pre>npm install
 ou
 yarn install </pre> 
 
 - Execute:
-<pre> npm start
+<pre>npm start
 ou
 yarn start </pre> 
 
