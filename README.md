@@ -88,6 +88,20 @@ Tendo em vista que o projeto pode evoluir bastante, abaixo serão discriminados 
 - Aprimorar Login do Usuário (Permitir Login com conta do GMAIL)
 - Permitir novos filtros além do já criado "Categoria de Produto" (Valor, Localização)
 
+## Comandos para execução
+
+- Clonar o repositório:
+<pre>git clone https://github.com/danielturmina/Projeto-IF977</pre> 
+
+- Instale as depedências do ReactJs:
+<pre> npm install
+ou
+yarn install </pre> 
+
+- Execute:
+<pre> npm start
+ou
+yarn start </pre> 
 
 ## Time
 
