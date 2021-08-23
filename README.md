@@ -76,7 +76,7 @@ Para construção da plataforma várias reuniões através do Google Meet foram 
 
 <br></br>
 <p align="center">
-  <img src="src\assets\images\trello.png" width="500">
+  <img src="src\assets\images\trello.png" width="1000">
 </p>
 <br></br>
 
