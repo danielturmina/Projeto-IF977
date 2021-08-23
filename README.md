@@ -33,7 +33,7 @@ As páginas da plataforma são:
 - Perfil, com as informações do usuário logado na plataforma;
 - Produto, página com as informações detalhadas do produto, e
 - Login, página principal para login do usuário na plataforma.
-- 
+
 ## Testes Realizados
 Com o objetivo de aplicar alguns testes na plataforma desenvolvida, foram realizadas simulações de ações que o usuário poderia fazer e também foram verificadas as respostas do software após os comandos dados pelo usuário.
 
