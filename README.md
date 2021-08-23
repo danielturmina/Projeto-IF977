@@ -78,10 +78,10 @@ Para construção da plataforma várias reuniões através do Google Meet foram 
   <img src="src\assets\images\trello.png" width="1000">
 </p>
 <br>
-Backlog -> Principais requisitos do projeto e que podem ser executadas a qualquer momento.
-Working On -> Atividades que estavam sendo executadas
-Tests -> Realização de testes.
-Done -> Atividades concluídas.
+Backlog -> Principais requisitos do projeto e que podem ser executadas a qualquer momento.<br/>
+Working On -> Atividades que estavam sendo executadas.<br/>
+Tests -> Realização de testes.<br/>
+Done -> Atividades concluídas.<br/>
 
 ## Melhorias Pendentes
 Tendo em vista que o projeto pode evoluir bastante, abaixo serão discriminados os pontos de melhorias futuras:
