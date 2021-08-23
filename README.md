@@ -73,13 +73,11 @@ Para construção da plataforma várias reuniões através do Google Meet foram 
 
 ## Como as atividades foram organizadas?
 #### Quadro SCRUM
-
-<br></br>
+<br>
 <p align="center">
   <img src="src\assets\images\trello.png" width="1000">
 </p>
-<br></br>
-
+<br>
 Backlog -> Principais requisitos do projeto e que podem ser executadas a qualquer momento.
 Working On -> Atividades que estavam sendo executadas
 Tests -> Realização de testes.
