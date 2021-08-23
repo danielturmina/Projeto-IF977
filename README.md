@@ -18,17 +18,22 @@ https://if977-plataformaweb.firebaseapp.com/
 </p>
 <br></br>
 
+## Detalhes da Plataforma
+#### Tecnologias Utilizadas
+Para desenvolvimento da plataforma, utilizamos o ReactJs no frontend, pois possui ferramentas excelentes para criação de interfaces e possui integração com diversas bibliotecas do JavaScript. Outra vantagem é a popularidade que essa ferramenta vem ganhando no mercado de trabalho.
 
-## Páginas Desenvolvidas
+No backend, utilizamos o Firebase, pois ele oferecia tudo que precisávamos, como Database, Storage, Sistema de Autenticação para Login e até mesmo Deploy.
+
+#### Sobre a plataforma
+Trata-se uma aplicação onde os usuários podem emprestar ou pedir emprestado itens, de diversas categorias, de forma centralizada e com custo abaixo do mercado.
+
+#### Páginas Desenvolvidas
 As páginas da plataforma são:
 - Home, com os principais produtos e filtro de busca;
 - Perfil, com as informações do usuário logado na plataforma;
 - Produto, página com as informações detalhadas do produto, e
 - Login, página principal para login do usuário na plataforma.
-
-## Detalhes da Plataforma
-
-
+- 
 ## Testes Realizados
 Com o objetivo de aplicar alguns testes na plataforma desenvolvida, foram realizadas simulações de ações que o usuário poderia fazer e também foram verificadas as respostas do software após os comandos dados pelo usuário.
 
