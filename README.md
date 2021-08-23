@@ -25,7 +25,7 @@ Para desenvolvimento da plataforma, utilizamos o ReactJs no frontend, pois possu
 No backend, utilizamos o Firebase, pois ele oferecia tudo que precisávamos, como Database, Storage, Sistema de Autenticação para Login e até mesmo Deploy.
 
 #### Sobre a plataforma
-Trata-se uma aplicação onde os usuários podem emprestar ou pedir emprestado itens, de diversas categorias, de forma centralizada e com custo abaixo do mercado.
+Trata-se de uma aplicação onde os usuários podem emprestar ou pedir emprestado itens, de diversas categorias, de forma centralizada e com custo abaixo do mercado.
 
 #### Páginas Desenvolvidas
 As páginas da plataforma são:
