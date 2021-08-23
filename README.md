@@ -5,6 +5,7 @@ https://if977-plataformaweb.firebaseapp.com/
 
 
 ## Link para a Publicação no Medium
+https://gavs2.medium.com/projeto-geral-engenharia-de-software-b78ab2d5571b
 
 
 
