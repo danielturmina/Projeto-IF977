@@ -20,7 +20,11 @@ https://if977-plataformaweb.firebaseapp.com/
 
 
 ## Páginas Desenvolvidas
-
+As páginas da plataforma são:
+- Home, com os principais produtos e filtro de busca;
+- Perfil, com as informações do usuário logado na plataforma;
+- Produto, página com as informações detalhadas do produto, e
+- Login, página principal para login do usuário na plataforma.
 
 ## Detalhes da Plataforma
 
