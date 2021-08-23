@@ -130,9 +130,12 @@ export default function Index() {
                     </div>
                 </div>
                 <div className = 'meio'>
-
-                    {produtos.map((produto) => (produto.tipo.includes(valor) ? ((<BannerComponent key={produto.id} imagem={produto.imagem} descricao={produto.descricao} produtoNome={produto.nome.toUpperCase()} bannerPreco={produto.preco} usuario={produto.usuario}/>)) : console.log(''))
-                    
+                    {isLoading ? (
+                        <ReactLoading color="#cc0041" />
+                    ) : (
+                        <>
+                            {produtos.map((produto) => (produto.tipo.includes(valor) ?((<BannerComponent key={produto.id} imagem={produto.imagem} descricao={produto.descricao} produtoNome={produto.nome.toUpperCase()} bannerPreco={produto.preco} usuario={produto.usuario}/>)) : console.log('')))}
+                        </>
                     )}
 
                 </div>
