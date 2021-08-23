@@ -72,7 +72,7 @@ Para construção da plataforma várias reuniões através do Google Meet foram 
 
 
 ## Como as atividades foram organizadas?
-# Quadro SCRUM
+#### Quadro SCRUM
 
 <br></br>
 <p align="center">
